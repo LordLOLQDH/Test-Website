@@ -3,17 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Moderne Test-Website für das zentrale KDS Banner.">
   <title>KDS Test Website</title>
+  <style>
+    :root{--bg:#080808;--surface:#111;--text:#f5f5f5;--muted:#a1a1a1;--orange:#ff7a00;--border:rgba(255,255,255,.09)}
+    *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}a{color:inherit;text-decoration:none}.container{width:min(1120px,calc(100% - 40px));margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(8,8,8,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}.logo{font-weight:800;letter-spacing:-.03em}.logo span{color:var(--orange)}.nav-links{display:flex;gap:28px;list-style:none;color:#cfcfcf;font-size:.95rem}.nav-links a:hover{color:var(--orange)}
+    .hero{min-height:650px;display:grid;place-items:center;text-align:center;padding:90px 0;background:radial-gradient(circle at 50% 35%,rgba(255,122,0,.13),transparent 34%),linear-gradient(180deg,#0b0b0b 0%,#080808 100%)}.eyebrow{display:inline-block;color:var(--orange);font-size:.78rem;font-weight:800;letter-spacing:.16em;margin-bottom:18px}h1{font-size:clamp(2.8rem,7vw,5.8rem);line-height:.98;letter-spacing:-.06em;max-width:900px}.hero p{max-width:650px;margin:28px auto 0;color:var(--muted);font-size:1.1rem}.buttons{display:flex;justify-content:center;gap:12px;margin-top:34px;flex-wrap:wrap}.button{padding:13px 20px;border-radius:10px;font-weight:700;border:1px solid var(--border)}.button.primary{background:var(--orange);color:#090909;border-color:var(--orange)}.button.secondary{background:var(--surface)}
+    section{padding:100px 0;border-top:1px solid var(--border)}.section-title{font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.04em}.section-text{color:var(--muted);max-width:650px;margin-top:14px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}.card{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:30px;transition:transform .2s,border-color .2s}.card:hover{transform:translateY(-4px);border-color:rgba(255,122,0,.45)}.number{color:var(--orange);font-weight:800;font-size:.85rem}.card h3{margin:14px 0 8px;font-size:1.25rem}.card p{color:var(--muted)}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.panel{background:linear-gradient(145deg,#151515,#0d0d0d);border:1px solid var(--border);border-radius:24px;padding:38px}.panel strong{color:var(--orange);font-size:2.5rem;display:block;margin-bottom:8px}.contact{text-align:center}.contact .section-text{margin-left:auto;margin-right:auto}footer{border-top:1px solid var(--border);padding:28px 0;color:#777;font-size:.9rem}
+    @media(max-width:760px){.nav-links{display:none}.hero{min-height:560px}.grid,.about{grid-template-columns:1fr}section{padding:72px 0}.container{width:min(100% - 28px,1120px)}}
+  </style>
 </head>
 <body>
+  <header><div class="container"><nav><a class="logo" href="#start">Kraus <span>Digital Solutions</span></a><ul class="nav-links"><li><a href="#leistungen">Leistungen</a></li><li><a href="#ueber-uns">Über uns</a></li><li><a href="#kontakt">Kontakt</a></li></ul></nav></div></header>
   <main>
-    <section class="hero">
-      <p>TEST WEBSITE</p>
-      <h1>Hier testen wir das KDS Banner</h1>
-      <p>Diese Seite dient ausschließlich zum Testen des zentralen Banners.</p>
-    </section>
+    <section class="hero" id="start"><div class="container"><div class="eyebrow">TEST WEBSITE · KDS BANNER</div><h1>Digitale Lösungen, die professionell wirken.</h1><p>Eine realistische Beispiel-Website zum Testen des zentral eingebundenen Kraus Digital Solutions Banners.</p><div class="buttons"><a class="button primary" href="#leistungen">Leistungen ansehen</a><a class="button secondary" href="#kontakt">Kontakt</a></div></div></section>
+    <section id="leistungen"><div class="container"><h2 class="section-title">Was wir testen</h2><p class="section-text">Die Seite besitzt mehrere Bereiche und typische Elemente einer modernen Unternehmenswebsite. Das KDS Banner wird ausschließlich über den zentralen Embed-Code geladen.</p><div class="grid"><article class="card"><div class="number">01</div><h3>Websites</h3><p>Moderne, responsive Websites mit klarem Aufbau und professionellem Design.</p></article><article class="card"><div class="number">02</div><h3>Redesign</h3><p>Bestehende Websites modernisieren und für aktuelle Geräte optimieren.</p></article><article class="card"><div class="number">03</div><h3>Optimierung</h3><p>Gezielte Verbesserungen bei Darstellung, Struktur und Nutzerfreundlichkeit.</p></article></div></div></section>
+    <section id="ueber-uns"><div class="container about"><div><div class="eyebrow">ÜBER DIE TESTSEITE</div><h2 class="section-title">Hier testen wir die zentrale Einbindung.</h2><p class="section-text">Der Banner befindet sich nicht im HTML dieser Seite. Er wird über denselben Script-Schnipsel eingebunden, den später auch Kunden verwenden.</p></div><div class="panel"><strong>100%</strong><p>zentral eingebunden</p><p style="color:#888;margin-top:10px">Keine lokale Kopie des Banners. Änderungen am zentralen KDS Banner können hier direkt getestet werden.</p></div></div></section>
+    <section id="kontakt" class="contact"><div class="container"><div class="eyebrow">KONTAKT</div><h2 class="section-title">Bereit für den nächsten Test?</h2><p class="section-text">Diese Kontaktsektion ist Teil der Test-Website und dient dazu, das Verhalten des Banners auf einer realistischeren Seite zu prüfen.</p><div class="buttons"><a class="button primary" href="https://kraus-digital-solutions.base44.app/kontakt">KDS kontaktieren</a></div></div></section>
   </main>
-
+  <footer><div class="container">© 2026 Kraus Digital Solutions · Test Website</div></footer>
   <script src="https://cdn.jsdelivr.net/gh/LordLOLQDH/KDS-banner@main/kds-embed.js" defer></script>
 </body>
 </html>
